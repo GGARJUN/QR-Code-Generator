@@ -36,12 +36,12 @@ export const QrCode = () => {
   }
   return (
     <div className="w-screen h-screen   flex flex-col justify-center items-center ">
-      <h1 className="mt-28 mb-5 text-xl font-semibold text-blue-400">
+      <h1 className="mt-10 mb-5 text-xl font-semibold text-blue-400">
         QR CODE GENERATOR
       </h1>
       {loading && <p>Please wait...</p>}
       {img && <img src={img} alt="" className="p-[5px]  shadow-md " />}
-      <div className=" w-full md:w-[50%]  flex flex-col ">
+      <div className=" w-full md:w-[50%]  flex flex-col mx-10">
         <label
           htmlFor="dataInput"
           className="text-left text-blue-400 font-medium text-base mb-2"
@@ -53,7 +53,7 @@ export const QrCode = () => {
           value={qrData}
           id="dataInput"
           placeholder="Enter data for QR code"
-          className=" p-2 border-2 border-blue-500 mb-5"
+          className="p-2 border-2 border-blue-500 mb-5"
           onChange={(e) => setQrData(e.target.value)}
         />
         <label
@@ -67,7 +67,7 @@ export const QrCode = () => {
           value={qrSize}
           id="sizeInput"
           placeholder="Enter Image size"
-          className=" p-2 border-2 border-blue-500 mb-5"
+          className="  p-2 border-2 border-blue-500 mb-5"
           onChange={(e) => setQrSize(e.target.value)}
         />
       </div>
